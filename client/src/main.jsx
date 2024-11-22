@@ -9,6 +9,7 @@ import FileUpload from './create-product/Fileupload';
 import Edit from './product-edit/Edit';
 import List from './product-list/list';
 import View from './product-view/view';
+import { Toaster } from './components/sonner';
 //import CreateProduct from './create-product';
 
 
@@ -40,6 +41,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
       <Header />
+      <Toaster></Toaster>
       <RouterProvider router={router} />
     </GoogleOAuthProvider>
   </StrictMode>

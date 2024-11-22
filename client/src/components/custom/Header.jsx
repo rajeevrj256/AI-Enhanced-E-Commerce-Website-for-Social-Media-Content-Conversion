@@ -25,7 +25,7 @@ function Header() {
     useEffect(() => {
        
         console.log(users);
-        newRegister();
+        
     }, [userlogged])
     const login = useGoogleLogin({
         onSuccess: (codeResp) => GetUserProfile(codeResp),
@@ -48,37 +48,11 @@ function Header() {
 
         
     };
-
-    const newRegister = () => {
-        console.log("newregistrai start")
-        const userData = JSON.parse(localStorage.getItem('user'));
-        console.log(userData);
-        console.log(userlogged)
-        if (userData) {
-            axios.post('https://car-mangement.onrender.com/api/auth/google', {
-                name: userData.name,
-                email: userData.email,
-                googleId: userData.id,
-                verifiedEmail: userData.verified_email,
-                picture: userData.picture,
-            })
-            .then((res) => {
-                console.log('User authenticated:', res.data);
-            })
-            .catch((err) => {
-                console.log('Login error:', err);
-            });
-        }
-
-        console.log("complete");
-    };
-    
-
     return (
         <div className='p-2 shadow-sm flex justify-between items-center px-3'>
            <div className="flex items-center gap-2">
-                <img src="/e-commerce.png" alt="logo" className="h-8" /> {/* Logo image */}
-                <span className="text-lg font-bold">E-commerce Solution</span> {/* Project name */}
+                <img src="/e-commerce.png" alt="logo" className="h-8" /> 
+                <span className="text-lg font-bold">E-commerce Solution</span> 
             </div> 
             <div>
                 {users ?

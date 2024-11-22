@@ -4,7 +4,7 @@ import { Button } from '../components/button';
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '@/services/firebaseConfig';
-
+import { toast } from "sonner"
 const FileUpload = () => {
   const [file, setFile] = useState(null); // File state
   const [url, setUrl] = useState(''); // URL state
@@ -40,11 +40,13 @@ const FileUpload = () => {
 
   const handleUpload = async () => {
     if (fileSource === 'file' && !file) {
+      toast("Please select a file to upload.")
       setMessage('Please select a file to upload.');
       return;
     }
   
     if (fileSource === 'url' && (!url || !isValidUrl(url))) {
+      toast("Please provide a valid URL.")
       setMessage('Please provide a valid URL.');
       return;
     }
@@ -60,7 +62,7 @@ const FileUpload = () => {
   
     try {
       setUploading(true);
-      setMessage(''); // Clear previous messages
+      setMessage(''); 
   
       if (user) {
         const response = await axios.post('http://localhost:5000/upload/aws_operations', formData, {
@@ -73,7 +75,7 @@ const FileUpload = () => {
         SaveData(parsedData, formData);
         setMessage('File uploaded successfully!');
       } else {
-        alert('Please login first');
+        toast("Please Login ")
       }
     } catch (error) {
       console.error('File upload failed:', error.response ? error.response.data : error.message);
