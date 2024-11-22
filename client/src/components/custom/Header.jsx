@@ -76,14 +76,20 @@ function Header() {
 
     return (
         <div className='p-2 shadow-sm flex justify-between items-center px-3'>
-            <img src="" alt="logo" />
+           <div className="flex items-center gap-2">
+                <img src="/e-commerce.png" alt="logo" className="h-8" /> {/* Logo image */}
+                <span className="text-lg font-bold">E-commerce Solution</span> {/* Project name */}
+            </div> 
             <div>
                 {users ?
                     <div className='flex items-center gap-3'>
                         <a href='/create-product'>
+                            <Button variant="Outline" className="rounded-full">Pricing</Button>
+                        </a>
+                        <a href='/create-product'>
                             <Button variant="Outline" className="rounded-full">+ Create Product</Button>
                         </a>
-                        <a href='/product-list'>
+                        <a href='/product_list'>
                             <Button variant="Outline" className="rounded-full">My product</Button>
                         </a>
                         <Popover>

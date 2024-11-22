@@ -12,16 +12,16 @@ function Hero() {
           Transform Social Media Into Shopping Opportunities:
           </span>
           <br />
-          <span className="text-gray-800">Effortless Product Listing Creation for Amazon Sellers</span>
+          <span className="text-gray-800">Effortless Product Listing Creation for E-commerce Sellers</span>
         </h1>
         {/* Subheading */}
         <p className="text-md sm:text-lg lg:text-xl text-center text-[#4a4e69] font-medium">
-        Develop a system that seamlessly converts social media content into comprehensive Amazon product listings, empowering buyers to compare and purchase products with ease.
+        Develop a system that seamlessly converts social media content into comprehensive E-commerce product listings, empowering buyers to compare and purchase products with ease.
         </p>
         {/* Button */}
         <Link to={'/create-product'}>
           <Button className="px-8 py-3 bg-[#ff7e5f] hover:bg-[#e06755] text-white text-lg font-semibold rounded-full shadow-md hover:shadow-lg transition-transform transform hover:scale-105 duration-200">
-            Get Started, It's Free
+            Let's Start your Free trial
           </Button>
         </Link>
       </div>

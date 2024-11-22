@@ -143,9 +143,6 @@ app.post('/upload/aws_operations', upload.single('file'), async (req, res) => {
 
       return res.status(200).json({
         message: 'File uploaded and processed successfully',
-        transcriptionText: transcriptionText || null, // Include transcription if available
-        rekognitionLabels: rekognitionLabels || null, // Include Rekognition labels if available
-        detectedText: detectedText || null, // Include detected text if available
         generatedProductInfo: geminiResponse.response.text() || null,
       });
     } else {
