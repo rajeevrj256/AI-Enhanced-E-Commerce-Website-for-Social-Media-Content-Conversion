@@ -16,7 +16,9 @@ function Hero() {
         </h1>
         {/* Subheading */}
         <p className="text-md sm:text-lg lg:text-xl text-center text-[#4a4e69] font-medium">
-          Leverage the power of AI to revolutionize social media into a seamless shopping experience. Build an intelligent system that automatically analyzes and transforms social media content into detailed E-commerce product listings. Empower buyers with the ability to effortlessly compare and purchase products, while enabling sellers to streamline product listing creation and boost their sales potential.
+        Transform social media into a seamless shopping experience with AI-driven automation. Build a system that converts social media content into detailed e-commerce listings, enabling buyers to compare and purchase effortlessly while helping sellers streamline listings and maximize sales.
+
+
         </p>
         {/* Button */}
         <Link to={'/create-product'}>
