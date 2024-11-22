@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import Header from './components/custom/header';
+import Header from './components/custom/Header';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import FileUpload from './create-product/Fileupload';
