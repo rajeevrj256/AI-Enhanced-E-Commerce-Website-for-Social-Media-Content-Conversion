@@ -9,14 +9,14 @@ function Hero() {
         {/* Heading */}
         <h1 className="font-extrabold text-[28px] sm:text-[36px] lg:text-[48px] text-center leading-snug tracking-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]">
-          Transform Social Media Into Shopping Opportunities:
+            AI-Powered Social Commerce Transformation:
           </span>
           <br />
           <span className="text-gray-800">Effortless Product Listing Creation for E-commerce Sellers</span>
         </h1>
         {/* Subheading */}
         <p className="text-md sm:text-lg lg:text-xl text-center text-[#4a4e69] font-medium">
-        Develop a system that seamlessly converts social media content into comprehensive E-commerce product listings, empowering buyers to compare and purchase products with ease.
+          Leverage the power of AI to revolutionize social media into a seamless shopping experience. Build an intelligent system that automatically analyzes and transforms social media content into detailed E-commerce product listings. Empower buyers with the ability to effortlessly compare and purchase products, while enabling sellers to streamline product listing creation and boost their sales potential.
         </p>
         {/* Button */}
         <Link to={'/create-product'}>
