@@ -38,7 +38,7 @@ const List = () => {
         {products.map((prod) => (
           <Link
             key={prod.id}
-            to={`/view-product/${prod.id}`} // Use individual product id for the link
+            to={`/view-product/${prod.id}`} 
             className="border rounded-lg p-4 bg-white shadow-md flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             <h3 className="text-lg font-semibold mb-4">{prod.ProductData?.title}</h3>
@@ -53,5 +53,5 @@ const List = () => {
     </div>
   );
 };
-
+ 
 export default List;
