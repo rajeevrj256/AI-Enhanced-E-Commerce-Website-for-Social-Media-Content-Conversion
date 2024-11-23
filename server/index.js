@@ -52,7 +52,7 @@ app.use(express.json()); // Middleware to parse JSON bodies
 app.post('/upload/aws_operations', upload.single('file'), async (req, res) => {
   const { fileSource, url } = req.body;
   let fileBuffer, originalname, mimetype,mediaUrl;
-  const bucketName = 'rjbucket256';
+  const bucketName = process.env.S3_bucket;
 
   try {
     if (fileSource === 'file') {
