@@ -65,7 +65,7 @@ const FileUpload = () => {
       setMessage(''); 
   
       if (user) {
-        const response = await axios.post('http://localhost:5000/upload/aws_operations', formData, {
+        const response = await axios.post('https://ai-enhanced-e-commerce-website-for.onrender.com/upload/aws_operations', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
