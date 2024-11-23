@@ -43,7 +43,7 @@ const List = () => {
           >
             <h3 className="text-lg font-semibold mb-4">{prod.ProductData?.title}</h3>
             <img
-              src={prod.ProductData?.images?.[0] || '/default-image.jpg'}
+              src={prod.ProductData?.images?.[0] || '/inventory.png'}
               alt={prod.ProductData?.title}
               className="w-full h-48 object-cover mb-4 rounded"
             />
