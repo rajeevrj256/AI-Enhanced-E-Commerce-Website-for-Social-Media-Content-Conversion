@@ -45,7 +45,7 @@ const FileUpload = () => {
       return;
     }
   
-    if (fileSource === 'url' && (!url || !isValidUrl(url))) {
+    if (fileSource === 'url' && (!url)) {
       toast("Please provide a valid URL.")
       setMessage('Please provide a valid URL.');
       return;
@@ -72,8 +72,14 @@ const FileUpload = () => {
         });
   
         const parsedData = JSON.parse(response.data.generatedProductInfo);
-        SaveData(parsedData, formData);
-        setMessage('File uploaded successfully!');
+        if(parsedData?.message){
+          toast("Insufficent Data,Please Provide More information in Your Video/Images");
+        }
+        else{
+
+          SaveData(parsedData, formData);
+          setMessage('File uploaded successfully!');
+        }
       } else {
         toast("Please Login ")
       }
@@ -107,10 +113,8 @@ const FileUpload = () => {
     }
   };
 
-  const isValidUrl = (string) => {
-    const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
-    return urlPattern.test(string);
-  };
+  
+  
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
