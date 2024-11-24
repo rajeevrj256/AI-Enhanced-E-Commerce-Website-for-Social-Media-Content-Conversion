@@ -51,6 +51,21 @@ Add .env.local file
 `VITE_GOOGLE_AUTH_CLIENT_ID`=Your google outh2.0 client Id from Google cloud console.
 
 ```
+
+
+## Installation by Docker
+```bash
+git clone
+docker-compose up --build
+```
+Access the Frontend and Backend
+
+After running docker-compose up, your services will be available at:
+
+Frontend: http://localhost:5173
+
+Backend: http://localhost:5000
+
 ## AWS config
 
 Create IAM role 
