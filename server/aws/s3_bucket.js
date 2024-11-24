@@ -19,4 +19,3 @@ export const uploadFileToS3 = async (fileBuffer, fileName, mimeType, bucketName)
     return { success: false, message: 'Failed to upload file to S3', error };
   }
 };
-

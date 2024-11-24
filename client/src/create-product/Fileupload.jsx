@@ -46,7 +46,7 @@ const FileUpload = () => {
     }
   
     if (fileSource === 'url' && (!url)) {
-      toast("Please provide a valid URL.")
+      toast("Please provide a valid  URL.")
       setMessage('Please provide a valid URL.');
       return;
     }
@@ -78,14 +78,15 @@ const FileUpload = () => {
         else{
 
           SaveData(parsedData, formData);
-          setMessage('File uploaded successfully!');
+         // setMessage('File uploaded successfully!');
         }
       } else {
         toast("Please Login ")
       }
     } catch (error) {
       console.error('File upload failed:', error.response ? error.response.data : error.message);
-      setMessage('Failed to upload file. Please try again.');
+      setMessage('Failed to Processing  file. Please try again.');
+      toast("Failed to Processing  file. Please try again.")
     } finally {
       setUploading(false);
     }
@@ -176,7 +177,7 @@ const FileUpload = () => {
           disabled={uploading}
           className={`w-full py-2 px-4 text-white font-semibold rounded-md ${uploading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'}`}
         >
-          {uploading ? 'Uploading...' : 'Generate'}
+          {uploading ? 'Processing...' : 'Generate'}
         </Button>
         {message && <p className="mt-4 text-sm text-gray-600">{message}</p>}
       </div>
