@@ -72,8 +72,14 @@ app.post('/upload/aws_operations', upload.single('file'), async (req, res) => {
       }
       console.log(url);
       mediaUrl=await instaFetch(url);
-      console.log(mediaUrl.videoUrl);
-      const response = await axios.get(mediaUrl.videoUrl, { responseType: 'arraybuffer' });
+      const finalUrl = mediaUrl?.videoUrl || mediaUrl?.images?.[0];
+
+      if (!finalUrl) {
+        throw new Error("Media URL not found");
+    }
+
+      
+      const response = await axios.get(finalUrl, { responseType: 'arraybuffer' });
 
        if (!response.data) {
       return res.status(400).json({ message: "Failed to fetch media from the provided URL" });
