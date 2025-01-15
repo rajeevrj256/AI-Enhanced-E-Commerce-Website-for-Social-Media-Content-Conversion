@@ -1,5 +1,5 @@
 
-# E-Commerce Solution With AI
+# E-Commerce Solution With GenAI
 
 Our tool extracts content (text, images, and videos) from social media posts, processes it using advanced AI algorithms, and formats it into detailed Amazon product listings. It includes features like content moderation, automatic description generation, and direct upload capabilities, simplifying the product listing process.
 
